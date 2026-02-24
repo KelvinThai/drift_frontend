@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "UI template that integrates the Drift program, using the simplified AuthorityDrift class from @drift/common.",
   "main": "index.js",
+  "workspaces": [
+    "ui"
+  ],
+  "resolutions": {
+    "@drift-labs/sdk": "file:../protocol-v2/sdk"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -16,8 +16,7 @@ const nextConfig: NextConfig = {
   },
   turbopack: {
     resolveAlias: {
-      "@drift/common": "../drift-common/common-ts/lib/index.js",
-      "@drift-labs/sdk": "../drift-common/protocol/sdk",
+      "@drift-labs/sdk": "../../protocol-v2/sdk",
       fs: { browser: "./node-browser-compatibility.js" },
       net: { browser: "./node-browser-compatibility.js" },
       dns: { browser: "./node-browser-compatibility.js" },

@@ -22,6 +22,12 @@ const DRIFT_CONFIGS: DriftConfigMap = {
   devnet: {
     solanaRpcEndpoint: process.env.NEXT_PUBLIC_SOLANA_DEVNET_RPC_ENDPOINT!,
     driftEnv: "devnet",
+    tradableMarkets: [
+      new MarketId(0, MarketType.SPOT), // USDC
+      new MarketId(0, MarketType.PERP), // SOL-PERP
+      new MarketId(1, MarketType.PERP), // BTC-PERP
+      new MarketId(2, MarketType.PERP), // ETH-PERP
+    ],
   },
   "mainnet-beta": {
     solanaRpcEndpoint: process.env.NEXT_PUBLIC_SOLANA_MAINNET_RPC_ENDPOINT!,

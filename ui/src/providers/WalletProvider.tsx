@@ -23,9 +23,13 @@ interface Props {
 }
 
 export default function AppWalletProvider({ children }: Props) {
-  // You can also provide a custom RPC endpoint
-  const network = WalletAdapterNetwork.Mainnet;
-  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  const network = WalletAdapterNetwork.Devnet;
+  const endpoint = useMemo(
+    () =>
+      process.env.NEXT_PUBLIC_SOLANA_DEVNET_RPC_ENDPOINT ||
+      clusterApiUrl(network),
+    [network],
+  );
 
   // Configure wallet adapters
   const wallets = useMemo(
