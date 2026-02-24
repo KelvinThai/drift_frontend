@@ -22,6 +22,12 @@ const DRIFT_CONFIGS: DriftConfigMap = {
   devnet: {
     solanaRpcEndpoint: process.env.NEXT_PUBLIC_SOLANA_DEVNET_RPC_ENDPOINT!,
     driftEnv: "devnet",
+    driftDlobServerHttpUrl:
+      process.env.NEXT_PUBLIC_DLOB_HTTP_URL || "http://localhost:6969",
+    orderbookConfig: {
+      dlobWebSocketUrl:
+        process.env.NEXT_PUBLIC_DLOB_WS_URL || "ws://localhost:6969/ws",
+    },
     tradableMarkets: [
       new MarketId(0, MarketType.SPOT), // USDC
       new MarketId(0, MarketType.PERP), // SOL-PERP
