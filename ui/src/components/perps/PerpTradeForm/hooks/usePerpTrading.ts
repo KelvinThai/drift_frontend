@@ -56,7 +56,8 @@ export const usePerpTrading = ({
   const [stopLossPrice, setStopLossPrice] = useState("");
   const [reduceOnly, setReduceOnlyState] = useState(false);
   const [postOnly, setPostOnlyState] = useState(false);
-  const [useSwift, setUseSwift] = useState(true);
+  const [useSwift, setUseSwift] = useState(false);
+  const [leverage, setLeverage] = useState(5);
 
   const setReduceOnly = (value: boolean) => {
     setReduceOnlyState(value);
@@ -328,6 +329,7 @@ export const usePerpTrading = ({
         direction,
         assetType: sizeType,
         size: sizeBigNum,
+        positionMaxLeverage: leverage,
         reduceOnly,
         postOnly: postOnly
           ? PostOnlyParams.MUST_POST_ONLY
@@ -396,6 +398,7 @@ export const usePerpTrading = ({
     reduceOnly,
     postOnly,
     useSwift,
+    leverage,
     isLoading,
     selectedMarketConfig,
 
@@ -412,6 +415,7 @@ export const usePerpTrading = ({
     setReduceOnly,
     setPostOnly,
     setUseSwift,
+    setLeverage,
     handleSubmit,
     resetForm,
 

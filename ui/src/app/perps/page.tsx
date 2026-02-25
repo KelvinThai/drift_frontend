@@ -95,6 +95,29 @@ export default function PerpsPage() {
     );
   }
 
+  if (perpMarketConfigs.length === 0) {
+    return (
+      <div className="container px-4 py-8">
+        <div className="max-w-6xl mx-auto flex justify-center">
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <TrendingUp className="h-6 w-6 text-purple-400" />
+                <CardTitle>Perpetuals Trading</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="text-center py-8">
+                <div className="animate-spin h-8 w-8 border-2 border-purple-400 border-t-transparent rounded-full mx-auto mb-4" />
+                <p className="text-gray-400">Loading markets...</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="w-full mx-auto flex flex-col gap-3">

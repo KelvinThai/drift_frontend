@@ -204,7 +204,7 @@ export function SwapForm({
         toMarketIndex,
         amount: amountBigNum,
         subAccountId: selectedSubAccountId,
-        jupiterQuote: quote,
+        quote: quote ?? undefined,
       });
 
       toast.success(

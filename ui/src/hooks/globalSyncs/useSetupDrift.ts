@@ -26,7 +26,7 @@ const DRIFT_CONFIGS: DriftConfigMap = {
       process.env.NEXT_PUBLIC_DLOB_HTTP_URL || "http://localhost:6969",
     orderbookConfig: {
       dlobWebSocketUrl:
-        process.env.NEXT_PUBLIC_DLOB_WS_URL || "ws://localhost:6969/ws",
+        process.env.NEXT_PUBLIC_DLOB_WS_URL || "ws://localhost:6970/ws",
     },
     tradableMarkets: [
       new MarketId(0, MarketType.SPOT), // USDC

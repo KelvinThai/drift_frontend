@@ -36,6 +36,7 @@ export function PerpTradeForm({
     reduceOnly,
     postOnly,
     useSwift,
+    leverage,
     isLoading,
     selectedMarketConfig,
     setOrderType,
@@ -50,6 +51,7 @@ export function PerpTradeForm({
     setReduceOnly,
     setPostOnly,
     setUseSwift,
+    setLeverage,
     handleSubmit,
     canSubmit,
   } = usePerpTrading({ perpMarketConfigs, selectedMarketIndex });
@@ -172,6 +174,28 @@ export function PerpTradeForm({
               min="0"
               required
             />
+          </div>
+
+          {/* Leverage Selector */}
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-gray-200">
+              Leverage: {leverage}x
+            </label>
+            <input
+              type="range"
+              min="1"
+              max="20"
+              step="1"
+              value={leverage}
+              onChange={(e) => setLeverage(Number(e.target.value))}
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-purple-500"
+            />
+            <div className="flex justify-between text-xs text-gray-500">
+              <span>1x</span>
+              <span>5x</span>
+              <span>10x</span>
+              <span>20x</span>
+            </div>
           </div>
 
           {/* Price Inputs Based on Order Type */}
