@@ -156,7 +156,7 @@ __metadata:
 
 "@drift-labs/sdk@file:../protocol-v2/sdk::locator=drift-ui-template%40workspace%3A.":
   version: 0.1.0
-  resolution: "@drift-labs/sdk@file:../protocol-v2/sdk#../protocol-v2/sdk::hash=875baf&locator=drift-ui-template%40workspace%3A."
+  resolution: "@drift-labs/sdk@file:../protocol-v2/sdk#../protocol-v2/sdk::hash=814324&locator=drift-ui-template%40workspace%3A."
   dependencies:
     "@coral-xyz/anchor": 0.29.0
     "@coral-xyz/anchor-30": "npm:@coral-xyz/anchor@0.30.1"
@@ -189,7 +189,7 @@ __metadata:
   dependenciesMeta:
     helius-laserstream:
       optional: true
-  checksum: 2cbb952ca4db289eab64d2233f5a699bc921773346788c3ecceceaa2e9146e1b8e70c9638e5d5c05e43b96cd8f611e961fb74c5f5cf383105462d7a52c56589f
+  checksum: 23b20b6054a364ca843eb678230f3bcc36b4f1c4224c95ab059679c6e6a617438254f1f303ecc2797cf1a0fb905df7a835c2b5b90d058230b5ee192c74da3a59
   languageName: node
   linkType: hard
 
